@@ -11,7 +11,7 @@ body {
 h1 {
     font-size: 80px;
     font-family: 'Press Start 2P';
-    color: indigo;
+    color: cyan;
     margin-bottom: 100px;
 
 
@@ -25,15 +25,13 @@ h2 {
 
 .main-box {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 0;
     padding: 32px;
     text-align: center;
-    box-shadow: 0 0 50px 0 grey;
-    border: black solid;
 
 }
 
@@ -50,20 +48,41 @@ h2 {
 .btn {
     font-size: 32px;
     font-family: 'Press Start 2P';
-    padding: 20px auto;
-    width: 32px;
+    padding: 20px;
+    margin-bottom: 20px;
     text-align: center;
-    justify-content: center;
-    margin-bottom: 16px;
     text-decoration: none;
     color: crimson;
+    background-color: aliceblue;
+    border-radius: 10px;
+
 }
 
-#highscore-btn {}
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px cyan;
+    transition: transform 200ms;
+    transform: scale(1.05);
+
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#highscore-btn {
+    background-color: yellow;
+
+}
+
+#highscore-btn:hover{
+    box-shadow: 5px 5px crimson ;
+}
 
 .container {
     border: solid black;
-
 }
 
 .card-timer {}
