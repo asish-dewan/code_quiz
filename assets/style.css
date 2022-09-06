@@ -5,42 +5,69 @@
 }
 
 body {
-    background-color: aliceblue;
-    background-image: ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url("../assets/images/2009178.png");
+}
+
+h1 {
+    font-size: 80px;
+    font-family: 'Press Start 2P';
+    color: indigo;
+    margin-bottom: 100px;
+
+
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 85px;
+
 }
 
 .main-box {
-    width: 940px;
-    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 32px;
+    text-align: center;
     box-shadow: 0 0 50px 0 grey;
-}
-
-.initial-message {
+    border: black solid;
 
 }
 
-.card-results {
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    font-size: 32px;
+    font-family: 'Press Start 2P';
+    padding: 20px auto;
+    width: 32px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: crimson;
+}
+
+#highscore-btn {}
+
+.container {
+    border: solid black;
 
 }
 
-.reset-button {
+.card-timer {}
 
-}
+.timer-text {}
 
-.card-timer{
-
-}
-
-.timer-text {
-
-
-}
-
-.timer-count {
-
-}
-
-
+.timer-count {}
