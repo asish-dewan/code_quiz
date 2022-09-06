@@ -1,0 +1,21 @@
+body {
+    color: white;
+
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: lightcyan;
+    font-size: 16px;
+    min-width: 375px;
+
+}
+
+.choice-container:hover{
+    cursor: pointer;
+    box-shadow: box-shadow: 5px 5px orange;
+    transform: scale (1.05);
+    transition: transform 100ms;
+}
