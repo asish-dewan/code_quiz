@@ -5,32 +5,31 @@ body {
 
 .choice-container {
     display: flex;
-    margin-bottom: 0.8rem;
+    margin-bottom: 20px;
     width: 100%;
     border-radius: 4px;
-    background-color: lightpink;
+    background-color: #CCCCFF	;
     font-size: 32px;
-    min-width: 80rem;
+    min-width: 80%;
 
 }
 
 .choice-container:hover{
     cursor: pointer;
-    box-shadow: 5px 5px lightgoldenrodyellow;
+    box-shadow: 5px 5px aliceblue;
     transform: scale (1.05);
     transition: transform 100ms;
 }
 
 .choice-prefix {
-    padding: 2rem 2.5rem;
+    padding: 50px 32px;
     color: white;
 
 }
 
 .choice-text {
-    padding: 2rem;
+    padding: 48px;
     width: 100%;
-    text-align: center;
 
 }
 
@@ -75,6 +74,6 @@ body {
 
 @media screen and (max-width:768px) {
     .choice-container {
-        min-width: 40rem;
+        width: 100%;
     }
 }

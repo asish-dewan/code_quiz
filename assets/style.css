@@ -4,17 +4,26 @@
     padding: 0;
 }
 
-body {
-    background-image: url("../assets/images/2009178.png");
-}
+    body {
+    
+    background-color: rgb(2, 1, 7);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} 
 
 h1 {
-    font-size: 80px;
+    font-size: 60px;
     font-family: 'Press Start 2P';
-    color: cyan;
+    color: turquoise;
     margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
 
+}
 
+i {
+    color: black;
 }
 
 h2 {
@@ -27,6 +36,7 @@ h2 {
     width: 100vw;
     height: 80vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -60,7 +70,7 @@ h2 {
 
 .btn:hover {
     cursor: pointer;
-    box-shadow: 5px 5px cyan;
+    box-shadow: 5px 5px rgb(131, 59, 208);
     transition: transform 200ms;
     transform: scale(1.05);
 
