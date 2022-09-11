@@ -34,13 +34,13 @@ h2 {
 
 .main-box {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 32px;
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 40px;
     text-align: center;
 
 }

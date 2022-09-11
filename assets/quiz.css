@@ -5,30 +5,33 @@ body {
 
 .choice-container {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     width: 100%;
-    border-radius: 4px;
-    background-color: #CCCCFF	;
+    border:5px solid rgb(173, 143, 229);
+    border-radius: 50px;
+    background-color: #CCCCFF;
     font-size: 32px;
-    min-width: 80%;
+    max-width: 80%;
 
 }
 
 .choice-container:hover{
     cursor: pointer;
-    box-shadow: 5px 5px aliceblue;
+    background-color: rgb(173, 143, 229);
     transform: scale (1.05);
-    transition: transform 100ms;
+    transition: transform 150ms;
 }
 
 .choice-prefix {
-    padding: 50px 32px;
+    padding: 50px 48px;
+    border-radius: 50px 0px 0px 50px;
+    background-color: rebeccapurple;
     color: white;
 
 }
 
 .choice-text {
-    padding: 48px;
+    padding: 50px;
     width: 100%;
 
 }
