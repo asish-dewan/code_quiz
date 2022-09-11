@@ -1,7 +1,7 @@
 //Define variables
 
 const question = document.querySelector('#question');
-const choices = Array.from (document.querySelector('.choice-text'));
+const choicesEl = document.getElementById('choices');
 
 // Progress bar
 
@@ -17,46 +17,46 @@ let availableQuestions = [];
 
 let questions = [
     {
-        question: 'The "function" and "var" are known as: ',
-        choice: ['Keywords','Data types','Declaration statements','Prototypes'],
+        title: 'The "function" and "var" are known as: ',
+        choices: ['Keywords','Data types','Declaration statements','Prototypes'],
         answer: 'Declaration Statements',
     },
     {
-        question: 'Which one of the following is the correct way for calling the JavaScript code?',
-        choice: ['Preprocessor','Triggering Event','RMI','Function/Method'],
+        title: 'Which one of the following is the correct way for calling the JavaScript code?',
+        choices: ['Preprocessor','Triggering Event','RMI','Function/Method'],
         answer: 'Function/Method',
     },
     {
-        question: ' Which of the following type of a variable is volatile? ',
-        choice: ['Mutable variable','Dynamic variable','Volatile variable','Immutable variable'],
+        title: ' Which of the following type of a variable is volatile? ',
+        choices: ['Mutable variable','Dynamic variable','Volatile variable','Immutable variable'],
         answer: 'Mutable variable',
     },
     {
-        question: 'Which of the following number object function returns the value of the number?',
-        choice1: ['toString()','valueOf()','toLocaleString()','toPrecision()'],
+        title: 'Which of the following number object function returns the value of the number?',
+        choices: ['toString()','valueOf()','toLocaleString()','toPrecision()'],
         answer: 'valueOf()',
     },
     {
-        question: 'Which of the following methods can be used to display data in some form using Javascript?',
-        choice1: ['document.write()','console.log()','window.alert()','All of the above'],
+        title: 'Which of the following methods can be used to display data in some form using Javascript?',
+        choices: ['document.write()','console.log()','window.alert()','All of the above'],
         answer: 'All of the above',
     }
-]
+];
 
 const score_points = 25;
 const max_questions = 5;
 
-startQuiz = () => {
+function startQuiz() {
     questionCounter = 0;
     score = 0;
-    availableQuestions = [...questions];
+    availableQuestions = [questions];
     console.log(availableQuestions);
     getNewQuestion();
 };
 
-getNewQuestion = () => {
+function getNewQuestion() {
 
-/*     if (availableQuestions.length === 0 || questionCounter > max_questions) {
+if (availableQuestions.length === 0 || questionCounter > max_questions) {
         localStorage.setItem('mostRecentScore',score)
 
         return window.location.assign("/end.html")
@@ -67,15 +67,17 @@ getNewQuestion = () => {
     progressText.innerHTML = `Question ${questionCounter} of ${max_questions}`;
     // Update the progress bar after each question
     progressBarFull.style.width =`${(questionCounter/max_questions) * 100}%`;
- */
-    // Track current question 
-    questionCounter++
-    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions [questionsIndex];
-    question.innerText = currentQuestion.question;
+
+     // Get current question from array
+     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = questions [questionsIndex];
+
+     // Update title with current question
+    var titleEl = document.getElementById('question-title');
+    titleEl.textContent = currentQuestion.title;
 
     //Get choices using dataset number
-    choices.forEach(choice => {
+    /*  choices.forEach(choice => {
         const number = choice.dataset['number'];
     //Use the data number to log the choice for the current question
         choice.innerText = currentQuestion['choice' + number];
@@ -84,14 +86,14 @@ getNewQuestion = () => {
     //Remove used questions
     availableQuestions.splice(questionsIndex, 1);
 
-    acceptingAnswers: true;
+    acceptingAnswers: true; */
 };
-
+/* 
     choices.forEach(choice => {
         choice.addEventListener('click', function(event) {
             console.log(event.target);
         });
-    })
+    }) */
 
 startQuiz();
 
