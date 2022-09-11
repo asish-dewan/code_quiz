@@ -18,43 +18,28 @@ let availableQuestions = [];
 let questions = [
     {
         question: 'The "function" and "var" are known as: ',
-        choice1: 'Keywords',
-        choice2: 'Data types',
-        choice3: 'Declaration statements',
-        choice4: 'Prototypes',
-        answer: 3,
+        choice: ['Keywords','Data types','Declaration statements','Prototypes'],
+        answer: 'Declaration Statements',
     },
     {
         question: 'Which one of the following is the correct way for calling the JavaScript code?',
-        choice1: 'Preprocessor',
-        choice2: 'Triggering Event',
-        choice3: 'RMI',
-        choice4: 'Function/Method',
-        answer: 4,
+        choice: ['Preprocessor','Triggering Event','RMI','Function/Method'],
+        answer: 'Function/Method',
     },
     {
         question: ' Which of the following type of a variable is volatile? ',
-        choice1: 'Mutable variable',
-        choice2: 'Dynamic variable',
-        choice3: 'Volatile variable',
-        choice4: 'Immutable variable',
-        answer: 1,
+        choice: ['Mutable variable','Dynamic variable','Volatile variable','Immutable variable'],
+        answer: 'Mutable variable',
     },
     {
         question: 'Which of the following number object function returns the value of the number?',
-        choice1: 'toString()',
-        choice2: 'valueOf()',
-        choice3: 'toLocaleString()',
-        choice4: 'toPrecision()',
-        answer: 2,
+        choice1: ['toString()','valueOf()','toLocaleString()','toPrecision()'],
+        answer: 'valueOf()',
     },
     {
         question: 'Which of the following methods can be used to display data in some form using Javascript?',
-        choice1: 'document.write()',
-        choice2: 'console.log()',
-        choice3: 'window.alert()',
-        choice4: 'All of the above',
-        answer: 4,
+        choice1: ['document.write()','console.log()','window.alert()','All of the above'],
+        answer: 'All of the above',
     }
 ]
 
