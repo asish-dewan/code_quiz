@@ -91,6 +91,16 @@ if (availableQuestions.length === 0 || questionCounter > max_questions) {
     }
 }
 
+    // Button Click event
+
+function questionClick(event) {
+    var buttonEl = event.target;
+
+    // Log button click if selected, if not do nothing
+    if (!buttonEl.matches('.choice')) {
+        return;
+    }
+}
 
 startQuiz();
 
