@@ -2,6 +2,9 @@
 
 const question = document.querySelector('#question');
 const choices = Array.from (document.querySelector('.choice-text'));
+
+// Progress bar
+
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
@@ -62,18 +65,28 @@ startQuiz = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    getNewQuestion ()
+    getNewQuestion ();
 }
-
 getNewQuestion = () => {
+
     if (availableQuestions.length === 0 || questionCounter > max_questions) {
         localStorage.setItem('mostRecentScore',score)
 
         return window.location.assign("/end.html")
     }
 
-}
+    //Question counter
+    questionCounter++
+    progressText.innerHTML = `Question ${questionCounter} of ${max_questions}`;
+    // Update the progress bar after each question
+    progressBarFull.style.width =`${(questionCounter/max_questions) *100%}`;
 
+    // Track current question 
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions [questionsIndex];
+    question.innerText = currentQuestion.question;
+
+}
 
 // Create Timer countdown
 

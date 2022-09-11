@@ -11,7 +11,7 @@ body {
     border-radius: 50px;
     background-color: #CCCCFF;
     font-size: 32px;
-    max-width: 80%;
+    min-width: 80%;
 
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .correct {
-    background: #0E64ED ;
+    background: greenyellow;
 }
 
 .incorrect {
@@ -59,8 +59,8 @@ body {
 }
 
 #progressBar {
-    width: 400px;
-    height: 50px;
+    width: 200px;
+    height: 40px;
     border: 5px solid white;
     margin-top: 32px;
     border-radius: 50px;
@@ -77,6 +77,6 @@ body {
 
 @media screen and (max-width:768px) {
     .choice-container {
-        width: 100%;
+        min-width: 80%;
     }
 }

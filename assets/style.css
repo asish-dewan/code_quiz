@@ -18,7 +18,6 @@ h1 {
     color: turquoise;
     margin-bottom: 100px;
     display: flex;
-    flex-wrap: wrap;
 
 }
 
@@ -40,8 +39,7 @@ h2 {
     align-items: center;
     margin: 0 auto;
     max-width: 80%;
-    padding: 40px;
-    text-align: center;
+    padding: 20px;
 
 }
 
@@ -60,7 +58,6 @@ h2 {
     font-family: 'Press Start 2P';
     padding: 20px;
     margin-bottom: 20px;
-    text-align: center;
     text-decoration: none;
     color: crimson;
     background-color: aliceblue;
