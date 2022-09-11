@@ -17,12 +17,12 @@ let availableQuestions = [];
 
 let questions = [
     {
-        question: 'The "function" and "var" are known as: '
+        question: 'The "function" and "var" are known as: ',
         choice1: 'Keywords',
         choice2: 'Data types',
         choice3: 'Declaration statements',
         choice4: 'Prototypes',
-        answer: 3
+        answer: 3,
     },
     {
         question: 'Which one of the following is the correct way for calling the JavaScript code?',
@@ -30,31 +30,31 @@ let questions = [
         choice2: 'Triggering Event',
         choice3: 'RMI',
         choice4: 'Function/Method',
-        answer: 4
+        answer: 4,
     },
     {
-        question: ' Which of the following type of a variable is volatile? '
+        question: ' Which of the following type of a variable is volatile? ',
         choice1: 'Mutable variable',
         choice2: 'Dynamic variable',
         choice3: 'Volatile variable',
         choice4: 'Immutable variable',
-        answer: 1
+        answer: 1,
     },
     {
-        question: 'Which of the following number object function returns the value of the number?'
+        question: 'Which of the following number object function returns the value of the number?',
         choice1: 'toString()',
         choice2: 'valueOf()',
         choice3: 'toLocaleString()',
         choice4: 'toPrecision()',
-        answer: 2
-    }
+        answer: 2,
+    },
     {
-        question: 'Which of the following methods can be used to display data in some form using Javascript?'
+        question: 'Which of the following methods can be used to display data in some form using Javascript?',
         choice1: 'document.write()',
         choice2: 'console.log()',
         choice3: 'window.alert()',
         choice4: 'All of the above',
-        answer: 4
+        answer: 4,
     }
 ]
 
@@ -65,28 +65,50 @@ startQuiz = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    getNewQuestion ();
-}
+    console.log(availableQuestions);
+    getNewQuestion();
+};
+
 getNewQuestion = () => {
 
-    if (availableQuestions.length === 0 || questionCounter > max_questions) {
+/*     if (availableQuestions.length === 0 || questionCounter > max_questions) {
         localStorage.setItem('mostRecentScore',score)
 
         return window.location.assign("/end.html")
-    }
+    };
 
     //Question counter
     questionCounter++
     progressText.innerHTML = `Question ${questionCounter} of ${max_questions}`;
     // Update the progress bar after each question
-    progressBarFull.style.width =`${(questionCounter/max_questions) *100%}`;
-
+    progressBarFull.style.width =`${(questionCounter/max_questions) * 100}%`;
+ */
     // Track current question 
+    questionCounter++
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions [questionsIndex];
     question.innerText = currentQuestion.question;
 
-}
+    //Get choices using dataset number
+    choices.forEach(choice => {
+        const number = choice.dataset['number'];
+    //Use the data number to log the choice for the current question
+        choice.innerText = currentQuestion['choice' + number];
+    });
+
+    //Remove used questions
+    availableQuestions.splice(questionsIndex, 1);
+
+    acceptingAnswers: true;
+};
+
+    choices.forEach(choice => {
+        choice.addEventListener('click', function(event) {
+            console.log(event.target);
+        });
+    })
+
+startQuiz();
 
 // Create Timer countdown
 
