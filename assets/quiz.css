@@ -3,21 +3,22 @@ body {
 
 }
 
-.choice-container {
+button {
     display: flex;
-    margin-bottom: 25px;
+    flex-direction: column;
+    margin-bottom: 50px;
     width: 100%;
-    border:5px solid rgb(173, 143, 229);
+    border: 3px solid rgb(173, 143, 229);
+    background-color: rgb(228, 190, 228);
     border-radius: 50px;
-    background-color: #CCCCFF;
     font-size: 32px;
     min-width: 80%;
 
 }
 
-.choice-container:hover{
+button:hover{
     cursor: pointer;
-    background-color: rgb(173, 143, 229);
+    background-color: darkorchid;
     transform: scale (1.05);
     transition: transform 150ms;
 }
@@ -29,13 +30,6 @@ body {
     color: white;
 
 }
-
-.choice-text {
-    padding: 50px;
-    width: 100%;
-
-}
-
 .correct {
     background: greenyellow;
 }

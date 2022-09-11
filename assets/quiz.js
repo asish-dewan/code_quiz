@@ -10,7 +10,6 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
 let currentQuestion = '';
-let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -76,24 +75,22 @@ if (availableQuestions.length === 0 || questionCounter > max_questions) {
     var titleEl = document.getElementById('question-title');
     titleEl.textContent = currentQuestion.title;
 
-    //Get choices using dataset number
-    /*  choices.forEach(choice => {
-        const number = choice.dataset['number'];
-    //Use the data number to log the choice for the current question
-        choice.innerText = currentQuestion['choice' + number];
-    });
+    // Clear old choices
+    choicesEl.innerHTML = '';
 
-    //Remove used questions
-    availableQuestions.splice(questionsIndex, 1);
+    // Loop choices
+    for (var i = 0; i < currentQuestion.choices.length; i++) {
+        var choice = currentQuestion.choices[i];
+        var choiceBtn = document.createElement('button');
+        choiceBtn.setAttribute('class', 'choice');
+        choiceBtn.setAttribute('value', choice);
 
-    acceptingAnswers: true; */
-};
-/* 
-    choices.forEach(choice => {
-        choice.addEventListener('click', function(event) {
-            console.log(event.target);
-        });
-    }) */
+        choiceBtn.textContent = i + 1 + '. ' + choice;
+
+        choicesEl.appendChild(choiceBtn);
+    }
+}
+
 
 startQuiz();
 
